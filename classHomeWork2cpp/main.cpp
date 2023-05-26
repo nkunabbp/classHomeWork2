@@ -1,4 +1,4 @@
-#include"classfraction.h"
+#include"classFraction.h"
 enum choose
 {
 	mult = 1,
@@ -16,9 +16,10 @@ int main() {
 	int answer;
 	int di_or_fr;
 
-	cout << "For Multiplate enter - 1\nFor minus enter - 2\nFor plus enter - 3\nFor Division enter - 4\nEnter: ";
+	cout << "For Multiplate enter - 1\nFor Minus enter - 2\nFor Plus enter - 3\nFor Division enter - 4\nEnter: ";
 	cin >> answer;
 
+	system("cls");
 
 	switch (answer)
 	{
@@ -31,16 +32,19 @@ int main() {
 		fr1.setden(DEN);
 		fr1.setnum(NUM);
 
-		cout << "if you want integer enter - 1 \nIf you want fraction enter - 2";
+
+		cout << endl << endl;
+		cout << "if you want integer enter - 1 \nIf you want fraction enter - 2\nEnter: ";
 		cin >> di_or_fr;
 
 		switch (di_or_fr)
 		{
 		case 1:
+			cout << endl;
 			cout << "Enter the number to multiplate with: ";
 			cin >> number;
 
-			cout << NUM << "/" << DEN << " * " << number << " = " << fr1.multiplate(number);
+			cout << NUM << "/" << DEN << " * " << number << "/1 " << " = " << fr1.multiplate(number);
 			break;
 
 		case 2:
@@ -54,9 +58,6 @@ int main() {
 			fr2.setden(deN);
 			fr2.setnum(nuM);
 			cout << NUM << "/" << DEN << "  *  " << nuM << "/" << deN << " = " << fr1.multiplate(fr2);
-			break;
-
-		default:
 			break;
 		}
 
@@ -72,19 +73,18 @@ int main() {
 		fr1.setden(DEN);
 		fr1.setnum(NUM);
 
-		cout << "if you want integer enter - 1 \nIf you want fraction enter - 2";
+		cout << "if you want integer enter - 1 \nIf you want fraction enter - 2\nEnter: ";
 		cin >> di_or_fr;
 		switch (di_or_fr)
 		{
 		case 1:
 			cout << "Enter the number for minus: ";
 			cin >> number;
-			cout << NUM << "/" << DEN << " - " << number << " = " << fr1.minus(number);
+			cout << NUM << "/" << DEN << " - " << number <<"/1 " << " = " << fr1.minus(number);
 			break;
 
 		case 2:
 			fraction fr2;
-
 
 			cout << "Enter numerator: ";
 			cin >> nuM;
@@ -94,9 +94,6 @@ int main() {
 			fr2.setden(deN);
 			fr2.setnum(nuM);
 			cout << NUM << "/" << DEN << " - " << nuM << "/" << deN << " = " << fr1.minus(fr2);
-			break;
-
-		default:
 			break;
 		}
 
@@ -113,7 +110,7 @@ int main() {
 		fr1.setnum(NUM);
 
 
-		cout << "if you want integer enter - 1 \nIf you want fraction enter - 2";
+		cout << "if you want integer enter - 1 \nIf you want fraction enter - 2\nEnter: ";
 		cin >> di_or_fr;
 		switch (di_or_fr)
 		{
@@ -121,7 +118,7 @@ int main() {
 			cout << "Enter the number for plus: ";
 			cin >> number;
 
-			cout << NUM << "/" << DEN << " + " << number << " = " << fr1.plus(number);
+			cout << NUM << "/" << DEN << " + " << number <<"/1 " << " = " << fr1.plus(number);
 			break;
 
 		case 2:
@@ -138,8 +135,6 @@ int main() {
 			cout << NUM << "/" << DEN << " + " << nuM << "/" << deN << " = " << fr1.plus(fr2);
 			break;
 
-		default:
-			break;
 		}
 
 		break;
@@ -153,7 +148,7 @@ int main() {
 		fr1.setden(DEN);
 		fr1.setnum(NUM);
 
-		cout << "if you want integer enter - 1 \nIf you want fraction enter - 2";
+		cout << "if you want integer enter - 1 \nIf you want fraction enter - 2\nEnter: ";
 		cin >> di_or_fr;
 		switch (di_or_fr)
 		{
@@ -161,7 +156,7 @@ int main() {
 			cout << "Enter the number to divide by: ";
 			cin >> number;
 
-			cout << NUM << "/" << DEN << " / " << number << " = " << fr1.division(number);
+			cout << NUM << "/" << DEN << " / " << number <<"/1 " << " = " << fr1.division(number);
 			break;
 
 		case 2:
@@ -178,8 +173,6 @@ int main() {
 			cout << NUM << "/" << DEN << " / " << nuM << "/" << deN << " = " << fr1.division(fr2);
 			break;
 
-		default:
-			break;
 		}
 
 		break;
