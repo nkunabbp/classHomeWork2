@@ -24,8 +24,8 @@ public:
 	double division(fraction fr);
 
 	fraction()
-	    :num{0},
-		den{1} 
+		:num{ 0 },
+		den{ 1 }
 	{}
 };
 
